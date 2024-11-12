@@ -1,0 +1,254 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #a1c7ce;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+.header {
+    background-color: #9d87b1;
+    padding: 14px 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.notes-icon{
+    height: 50px;
+    border: 4px solid #fff;
+    border-radius: 50%;
+     margin-right: 10px;
+}
+
+.notes-app-heading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.section {
+    padding: 20px 0;
+}
+
+.main-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.add-icon {
+    height: 80px;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.add-icon:hover {
+    transform: scale(1.1);
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    z-index: 1000;
+}
+
+.note-box {
+    background-color: #f8f7f7;
+    padding: 20px;
+    border-radius: 15px;
+    width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.title-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 2px solid #000;
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+#popup-title{
+    text-align: center;
+}
+
+#note-area {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #000;
+    border-radius: 10px;
+    font-size: 16px;
+    resize: none;
+    height: 150px;
+}
+
+.notes-info {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.btn-box {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-style {
+    padding: 10px 20px;
+    font-size: 15px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#create-note-btn{
+    background-color: #7f19c4;
+}
+
+#closebtn{
+    background-color: #000;
+    color: #fff;
+}
+
+.create-note-btn:hover {
+    background-color: #65129f;
+}
+
+#edit-save {
+    background-color: #155e15;
+    display: none;
+}
+
+.edit-save:hover {
+    background-color: #0f4c0f;
+}
+
+.Close-note-btn {
+    background-color: #a5a5a5;
+}
+
+.Close-note-btn:hover {
+    background-color: #8a8a8a;
+}
+
+/* New styles for notes display */
+
+.notes-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+}
+
+.note {
+    width: 300px;
+    height: 250px;
+    padding: 15px;
+    background-color: #f8f7f7;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+
+.note h3 {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #333;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    background-color: #65129f;
+    color: #fff;
+    border-radius: 20px;
+    padding: 2px 0px;
+}
+
+.note p {
+    font-size: 18px;
+    color: #080707;
+    flex-grow: 1;
+    overflow-y: auto;
+    margin-bottom: 10px;
+}
+
+.delete-img {
+    width: 28px;
+    cursor: pointer;
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    transition: transform 0.2s;
+}
+
+.delete-img:hover {
+    transform: scale(1.1);
+}
+
+.edit-note-btn {
+    width: 28px;
+    cursor: pointer;
+    position: absolute;
+    bottom: 15px;
+    right: 60px;
+    transition: transform 0.2s;
+}
+
+.edit-note-btn:hover {
+    transform: scale(1.1);
+}
+
+
+.blinking-button {
+    padding: 15px 30px;
+    font-size: 18px;
+    color: #fff;
+    background-color: #0065d1;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    outline: none;
+    animation: pulse 2s infinite; 
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1); 
+        opacity: 1; 
+    }
+    50% {
+        transform: scale(1.1); 
+        opacity: 0.7; 
+    }
+}

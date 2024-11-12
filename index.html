@@ -1,0 +1,45 @@
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🖊️Notes App📗</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body> 
+   <header class="header">
+    <div class="navbar">
+        <div class="logo">
+            <h2 class="notes-app-heading"><img src="./img/notes.png" class="notes-icon" alt="">Write Your Notes🖊️.</h2>
+        </div>
+    </div>
+   </header>
+
+   <section class="section">
+    <div class="main-section">
+      <div id="notes-container" class="notes-container"></div>
+
+      <div class="overlay" id="overlay">
+        <div class="note-box" id="note-box">
+          <div class="notes-info">
+            <h2 id="popup-title">Write Note</h2>  
+            <input type="text" placeholder="Title" class="title-input" id="note-title">
+            <textarea name="textarea" placeholder="Write note..." id="note-area" rows="10" cols="40"></textarea>
+            <div class="btn-box">
+              <button class="btn-style" id="create-note-btn" onclick="saveNote()">Create Note</button>
+              <button class="btn-style" id="edit-save" onclick="saveNote()">Save Changes</button>
+              <button class="btn-style" id="closebtn" onclick="closePopup()">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
+      <img src="./img/add.png" onclick="notePopup()" class="add-icon blinking-button" alt="Add Note">
+    </div>
+   </section>
+
+</body>
+<script src="app.js"></script>
+</html>
